@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 	let result;
 	conn.query(sql.selectAllBasicUsers, function(err, results) {
 		if (err) {throw err}
-		console.log(results);
+		//console.log(results);
 		result = results;
 		let origUrl = req.originalUrl;
 		console.log(result);
