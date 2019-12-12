@@ -3,3 +3,6 @@ extends layout
 block content
 	h1 Welcome to signup
 	h1= origUrl
+	p
+		each thing in result
+			p= thing.username

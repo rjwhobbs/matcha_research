@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 	res.render('index', {title: 'Home'});
 });
 
-var signupRouter = require('./signup');
+let signupRouter = require('./signup');
 app.use('/signup', signupRouter);
 
 app.listen(3000, function() {
