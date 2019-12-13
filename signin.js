@@ -15,9 +15,16 @@ router.get('/', function(req, res) {
 	});
 }).post('/', function(req, res) {
 	let username = req.body.Username;
-	let password = req.body.Password;
+	let passwd = req.body.Password;
 	conn.query(sql.selectPasswd, [username], function(err, results) {
 		if (err) {throw err}
-		console.log(results);
+		// This will need to be encryted and decrypted
+		if (results.length > 0 && passwd == results[0].passwd) {
+			console.log("here");
+			req.session.username = username;
+			req.session.loggedin = true;
+			res.render('signin', {auth: req.session.loggedin});
+		}
+		res.render('signin');
 	});
 });
