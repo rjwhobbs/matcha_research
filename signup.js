@@ -13,6 +13,7 @@ router.get('/', function(req, res) {
 		if (err) {throw err}
 		result = results;
 		let origUrl = req.originalUrl;
+		console.log(results);
 		res.render('signup', {
 			title: 'Signup',
 			origUrl: origUrl,

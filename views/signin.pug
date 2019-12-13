@@ -2,3 +2,8 @@ extends layout
 
 block content
 	h1 Welcome to signin
+	.login-form
+		form(method="post")
+			input(type="text", name="Username", placeholder="Username")
+			input(type="password", name="Password", placeholder="Password")
+			input(type="submit")
