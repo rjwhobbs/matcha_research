@@ -16,7 +16,7 @@ let settingsTwo = {
 	socketPath: '/goinfre/rhobbs/Desktop/Server/mysql/tmp/mysql.sock'
 };
 
-let conn = mysql.createConnection(settingsTwo);
+let conn = mysql.createConnection(settingsOne);
 
 conn.connect(function(err) {
 	if (err) {throw err}

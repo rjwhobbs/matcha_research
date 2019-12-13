@@ -21,3 +21,20 @@ router.get('/', function(req, res) {
 		});
 	});
 });
+
+// router.get('/', function(req, res) {
+// 	let result;
+// 	conn.query(sql.selectAllBasicUsers) 
+// 	.then(function(results) {
+// 		result = results;
+// 		let origUrl = req.originalUrl;
+// 		console.log(results);
+// 		res.render('signup', {
+// 			title: 'Signup',
+// 			origUrl: origUrl,
+// 			result: result
+// 		});
+// 	}).catch(err => {
+// 		console.log(err);
+// 	});
+// });
