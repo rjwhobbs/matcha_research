@@ -15,6 +15,9 @@ app.get('/', function(req, res) {
 let signupRouter = require('./signup');
 app.use('/signup', signupRouter);
 
+let signinRouter = require('./signin');
+app.use('/signin', signinRouter);
+
 app.listen(3000, function() {
 	console.log('App listening on port 3000');
 });
