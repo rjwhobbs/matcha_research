@@ -13,10 +13,10 @@ let settingsTwo = {
 	user: 'root',
 	password: 'pw123456',
 	database: 'testdb',
-	socketPath: '/goinfre/rhobbs/Desktop/Server/mysql/tmp/mysql.sock'
+	socketPath: '/goinfre/rhobbs/Desktop/server/mysql/tmp/mysql.sock'
 };
 
-let conn = mysql.createConnection(settingsOne);
+let conn = mysql.createConnection(settingsTwo);
 
 conn.connect(function(err) {
 	if (err) {throw err}
