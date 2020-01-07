@@ -18,6 +18,9 @@ app.get('/', function(req, res) {
 	res.render('index', {title: 'Home'});
 });
 
+let doMoreThings = require('./domorethings');
+app.use('/test', doMoreThings);
+
 let signupRouter = require('./signup');
 app.use('/signup', signupRouter);
 
