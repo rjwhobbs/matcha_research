@@ -22,13 +22,15 @@ let doTheJoins4 = "SELECT testusers.username, testtags.tag, testmessages.message
 					"INNER JOIN testmessages " +
 					"ON testusers.user_id = ?";
 let doTheJoins3 = "SELECT testusers.username, testusers.email, testtags.tag FROM testusers INNER JOIN testtags ON testusers.user_id = ?";
+let sqlDelete = "DELETE FROM testusers " +
+					"WHERE user_id = ?";
 
 let arr1 = ['Derp', 'derp@derp.com', 'derp'];
 let arr2 = [2, "this is derpy message", "Derp"];
 let arr3 = [2];
 
 router.get('/', function(req, res) {
-	conn.query(doTheJoins4, arr3, function(err, results, feilds) {
+	conn.query(sqlDelete, arr3, function(err, results, feilds) {
 		if (err) {throw err}
 		console.log(results);
 		//console.log(feilds);
