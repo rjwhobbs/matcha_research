@@ -9,11 +9,14 @@ let router = express.Router();
 module.exports = router;
 
 let testSql = 'INSERT INTO testusers (`username`, `email`, `password`) VALUES (?, ?, ?)';
+let testSql2 = 'INSERT INTO testtags (`user_id`, `tag`, `username`) VALUES (?, ?, ?)';
 
 
 router.get('/', function(req, res) {
-	conn.query(testSql, ["Derp", "derp@derp", "derp"], function(err, results, feilds) {
+	conn.query(testSql2, [ 1, "derpy", "Derp"], function(err, results, feilds) {
 		if (err) {throw err}
+		console.log(results);
+		console.log(feilds);
 		res.send("Welcome to the test page");
 	});
 });
